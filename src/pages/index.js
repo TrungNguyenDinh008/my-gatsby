@@ -1,11 +1,16 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import { font } from "../components/style.module.css"
 
-const IndexPage = () => {
+
+const IndexPage = ({data}) => {
   return (
-    <Layout pageTitle="Home Page">
-    <p>Hi there! This my first demo, I'm making this by following the Gatsby Tutorial.</p>
-            </Layout>
+    <body className={font}>
+      <Layout pageTitle="Home Page"></Layout>
+      <p>Hi there! This is my first Blog Site. I'm making this by following The Gatsby Tutorial.</p>
+
+    </body>
+    
   )
 }
 

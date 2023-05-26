@@ -1,0 +1,51 @@
+body{
+    text-align: center;
+}
+.font {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bar-grid{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+
+}
+.nav-bar-item{
+    padding: auto auto;
+    list-style: none;
+    text-decoration: none;
+    
+
+}
+.nav-bar-link{
+    color: black;
+    padding: auto;
+    text-decoration: none;
+    font-size: 2em;
+}
+.nav-bar-logo{
+font-size: 2em;
+text-decoration: none;
+color: white;
+background-color: rgb(54, 192, 54);
+padding: 20px 20px 0px 20px ;
+}
+.container{
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+}
+.header{
+    font-size: 3em;
+    color: #2f9111;
+}
+.my-face-image{
+    border-radius: 50%;
+    width: 200px;
+}
+.info{
+    text-align: left;
+}
+.my-name{
+    color: #2f9111;
+}
+

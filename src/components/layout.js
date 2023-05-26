@@ -1,20 +1,59 @@
 import * as React from "react"
-import {Link} from "gatsby"
+import{
+    font,
+    navBarItem,
+    navBarLink,
+    navBarLogo,
+    navBarGrid,
+    container,
+    header
+    
+    } from "../components/style.module.css" 
+    import { Link, useStaticQuery, graphql } from 'gatsby'
 
-const Layout = ({pageTitle, children}) => {
+
+   
+const Layout = ({pageTitle}) => {
+    const data = useStaticQuery(graphql`
+    query {
+        site {
+            siteMetadata {
+              human {
+                fullName
+              }
+            }
+          }
+        }
+    `)
     return (
-        <div>
+        
+        <body>
+        <div className={font}>
             <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
+                <ul className={navBarGrid}>
+                    <li className={navBarItem}>
+                    <Link to="/" className={navBarLink}>Home</Link>
+                    </li>
+                    <li className={navBarItem}>
+                    <Link to="/about" className={navBarLink}>About</Link>
+                    </li>
+                    <li className={navBarItem}>
+                    <Link to="#" className={navBarLogo}><span>{data.site.siteMetadata.human.fullName}</span>'s Blog</Link>  
+                    </li>
+                    <li className={navBarItem}>
+                    <Link to="/blog" className={navBarLink}>Blog</Link>
+                    </li>
+                    <li className={navBarItem}>
+                    <Link to="/contact" className={navBarLink}>Contact</Link>
+                    </li>
                 </ul>
             </nav>
-            <main>
-                <h1>{pageTitle}</h1>
-                {children}
+            <main className={container}>
+                <h1 className={header}>{pageTitle}</h1>
             </main>
         </div>
+        </body>
+       
     )
 }
 export default Layout
