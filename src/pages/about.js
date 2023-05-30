@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import {
      font ,
-     container,
+     containerInfo,
      info,
      myFaceImage
 } from "../components/style.module.css"
@@ -16,7 +16,7 @@ const AboutPage = ({data}) => {
          <Layout pageTitle = "About Page"></Layout>
          
          <h1>My Profile:</h1>   
-         <div className={container}> 
+         <div className={containerInfo}> 
          <div>
             <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1685006848~exp=1685007448~hmac=232fa586746bff7a91730bef6d6258bf87d87d956b37df4b2d5fa5389433fc08" alt="my face" className={myFaceImage}></img>
          </div>

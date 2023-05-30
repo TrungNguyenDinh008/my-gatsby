@@ -3,30 +3,17 @@ import{
     font,
     navBarItem,
     navBarLink,
-    navBarLogo,
     navBarGrid,
     container,
     header
     
     } from "../components/style.module.css" 
-    import { Link, useStaticQuery, graphql } from 'gatsby'
+    import { Link } from 'gatsby'
 
 
    
 const Layout = ({pageTitle}) => {
-    const data = useStaticQuery(graphql`
-    query {
-        site {
-            siteMetadata {
-              human {
-                fullName
-              }
-            }
-          }
-        }
-    `)
     return (
-        
         <body>
         <div className={font}>
             <nav>
