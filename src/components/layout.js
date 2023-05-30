@@ -38,9 +38,6 @@ const Layout = ({pageTitle}) => {
                     <Link to="/about" className={navBarLink}>About</Link>
                     </li>
                     <li className={navBarItem}>
-                    <Link to="#" className={navBarLogo}><span>{data.site.siteMetadata.human.fullName}</span>'s Blog</Link>  
-                    </li>
-                    <li className={navBarItem}>
                     <Link to="/blog" className={navBarLink}>Blog</Link>
                     </li>
                     <li className={navBarItem}>
