@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import { font } from "../components/style.module.css"
+import Seo from "../components/seo"
 
 
 const IndexPage = ({data}) => {
@@ -16,4 +17,4 @@ const IndexPage = ({data}) => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <Seo title="Home Page"/>

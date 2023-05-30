@@ -7,6 +7,7 @@ import {
      myFaceImage
 } from "../components/style.module.css"
 import { graphql } from "gatsby"
+import Seo from "../components/seo"
 
 
 const AboutPage = ({data}) => {
@@ -40,9 +41,9 @@ query {
             hobby
           }
         }
-      }
     }
+}
 `
-export const Head = () => <title>About Page</title>
+export const Head = () => <Seo title="About Page"/>
 
 export default AboutPage

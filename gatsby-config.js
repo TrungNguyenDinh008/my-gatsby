@@ -3,6 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
+    title:"Test",
     siteUrl: `https://www.yourdomain.tld`,
     human: {
       fullName: "Nguyen Dinh Trung",
@@ -14,8 +15,15 @@ module.exports = {
     },
   },
   plugins: [
-    // "gatsby-source-filesystem",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog/`,
+      }
+    },
   ],
 };

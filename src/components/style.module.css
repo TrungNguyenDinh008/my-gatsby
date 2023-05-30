@@ -18,7 +18,7 @@ body{
 }
 .nav-bar-link{
     color: black;
-    padding: auto;
+    padding: auto 50px;
     text-decoration: none;
     font-size: 2em;
 }
@@ -26,13 +26,14 @@ body{
 font-size: 2em;
 text-decoration: none;
 color: white;
-background-color: rgb(54, 192, 54);
+background-color: #2f9111;
 padding: 20px 20px 0px 20px ;
 }
 .container{
-    margin: auto;
+    margin: 50px auto 50px auto;
     max-width: 500px;
     text-align: center;
+    
 }
 .header{
     font-size: 3em;
@@ -47,5 +48,17 @@ padding: 20px 20px 0px 20px ;
 }
 .my-name{
     color: #2f9111;
+}
+@media screen and (max-width: 768px) {
+    .nav-bar-grid{
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+    .nav-bar-logo{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
 }
 
