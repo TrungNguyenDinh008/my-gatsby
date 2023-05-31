@@ -1,22 +1,21 @@
 import * as React from "react";
-import Layout from "../components/layout";
-import { container } from "../components/style.module.css"
-import Seo from "../components/seo";
-import { graphql } from "gatsby";
+import Layout from "../../components/layout";
+import { container, font, navBarLink } from "../../components/style.module.css"
+import Seo from "../../components/seo";
+import { graphql, Link} from "gatsby";
 
 const BlogPage = ({ data }) => {
   return (
-    <body>
-      <Layout pageTitle="Blog Page"></Layout>
-      {data.allMdx.nodes.map((object) => (
+      <Layout pageTitle="Blog Page" className={font}>
+ {data.allMdx.nodes.map((object) => (
         <div key={object.id} className={container}>
-          <h1>{object.frontmatter.title}</h1>
+          <Link to={`/blog/${object.frontmatter.slug}`} className={navBarLink}>{object.frontmatter.title}</Link>
           <p>Date: {object.frontmatter.date}</p>
           <p>Author: {object.frontmatter.author}</p>
           <p>{object.excerpt}</p>
         </div>
       ))}
-    </body>
+      </Layout>
   );
 };
 
@@ -29,6 +28,7 @@ query {
         title
         date
         author
+        slug
       }
       id
       excerpt

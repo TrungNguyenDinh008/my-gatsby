@@ -12,10 +12,8 @@ import Seo from "../components/seo"
 
 const AboutPage = ({data}) => {
     return (
-        <body className={font}>
-         <Layout pageTitle = "About Page"></Layout>
-         
-         <h1>My Profile:</h1>   
+         <Layout pageTitle = "About Page" className={font}>
+            <h1>My Profile:</h1>   
          <div className={containerInfo}> 
          <div>
             <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1685006848~exp=1685007448~hmac=232fa586746bff7a91730bef6d6258bf87d87d956b37df4b2d5fa5389433fc08" alt="my face" className={myFaceImage}></img>
@@ -27,7 +25,9 @@ const AboutPage = ({data}) => {
          <p><b>Hobby:</b> {data.site.siteMetadata.human.hobby}</p>  
          </div>
          </div>
-        </body>
+         </Layout>
+         
+       
     )
 }
 export const data = graphql`

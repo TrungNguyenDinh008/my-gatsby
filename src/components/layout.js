@@ -12,7 +12,7 @@ import{
 
 
    
-const Layout = ({pageTitle}) => {
+const Layout = ({pageTitle, children}) => {
     return (
         <body>
         <div className={font}>
@@ -34,6 +34,7 @@ const Layout = ({pageTitle}) => {
             </nav>
             <main className={container}>
                 <h1 className={header}>{pageTitle}</h1>
+                {children}
             </main>
         </div>
         </body>
