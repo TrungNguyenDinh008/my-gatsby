@@ -26,7 +26,7 @@ query {
     nodes {
       frontmatter {
         title
-        date
+        date (formatString :"DD-MM-YYYY")
         author
         slug
       }
